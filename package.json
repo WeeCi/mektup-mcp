@@ -1,0 +1,17 @@
+{
+  "name": "mektup-mcp",
+  "version": "0.2.0",
+  "type": "module",
+  "bin": {
+    "mektup-mcp": "./server.js"
+  },
+  "scripts": {
+    "start:http": "node http-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "zod": "^3.24.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.usemektup/mektup",
+  "title": "Mektup",
+  "description": "Self-hosted, multi-domain email platform. Register a domain, get real DNS records, create real mailboxes (IMAP/SMTP), send and read mail, and manage drafts/contacts/folders/forwarding/vacation replies - all as MCP tools backed by Mektup's live REST API.",
+  "version": "0.2.0",
+  "websiteUrl": "https://usemektup.com",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.usemektup.com/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <your Mektup API key, e.g. mek_live_...> - create one at app.usemektup.com under API keys.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
