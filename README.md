@@ -65,7 +65,7 @@ Use this when a client can only launch a local process, not call a remote URL.
 
 **2. Install dependencies:**
 ```bash
-git clone https://github.com/usemektup/mektup-mcp.git
+git clone https://github.com/WeeCi/mektup-mcp.git
 cd mektup-mcp
 npm install
 ```
