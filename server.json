@@ -1,10 +1,14 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "com.usemektup/mektup",
+  "name": "io.github.WeeCi/mektup-mcp",
   "title": "Mektup",
-  "description": "Self-hosted, multi-domain email platform. Register a domain, get real DNS records, create real mailboxes (IMAP/SMTP), send and read mail, and manage drafts/contacts/folders/forwarding/vacation replies - all as MCP tools backed by Mektup's live REST API.",
+  "description": "Self-hosted multi-domain email as MCP tools - register domains, real mailboxes, send/read mail.",
   "version": "0.2.0",
   "websiteUrl": "https://usemektup.com",
+  "repository": {
+    "url": "https://github.com/WeeCi/mektup-mcp",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
