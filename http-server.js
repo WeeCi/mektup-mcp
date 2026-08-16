@@ -56,14 +56,27 @@ async function loadClerkOAuthMetadata() {
 }
 const clerkOAuthMetadata = await loadClerkOAuthMetadata();
 
+// Clerk's own scopes_supported includes public_metadata/private_metadata,
+// but those are only grantable to pre-approved first-party Clerk apps -
+// a dynamically-registered client (Smithery, or anyone else discovering
+// this server cold via DCR) gets "invalid_scope" from Clerk's /authorize
+// the moment it requests either, since Clerk rejects them for DCR clients
+// specifically. Our own backend never needs them anyway - api/auth.js
+// resolves the user via clerkClient.users.getUser() using the API's own
+// secret key, which is unscoped by the caller's token - so what we
+// advertise here is deliberately narrowed to what a DCR client can
+// actually be granted, not a straight passthrough of Clerk's full list.
+const DCR_SAFE_SCOPES = ["openid", "profile", "email", "offline_access"];
+const advertisedOAuthMetadata = { ...clerkOAuthMetadata, scopes_supported: DCR_SAFE_SCOPES };
+
 // Serves /.well-known/oauth-protected-resource/mcp (points clients at Clerk)
 // and /.well-known/oauth-authorization-server (a same-origin mirror of
 // Clerk's own, for clients that only check the resource server's copy).
 app.use(mcpAuthMetadataRouter({
-  oauthMetadata: clerkOAuthMetadata,
+  oauthMetadata: advertisedOAuthMetadata,
   resourceServerUrl: MCP_PUBLIC_URL,
   resourceName: "Mektup",
-  scopesSupported: clerkOAuthMetadata.scopes_supported,
+  scopesSupported: DCR_SAFE_SCOPES,
 }));
 
 function extractBearer(req) {
