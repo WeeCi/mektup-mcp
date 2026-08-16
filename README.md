@@ -202,6 +202,7 @@ send_email({ from: "hello@example.com", to: "you@gmail.com", subject: "It works"
 | Tool | Input | Description |
 |---|---|---|
 | `list_messages` | `mailbox`, `limit?`, `direction?`, `trash?`, `folder?`, `q?` | List messages (one row per thread). Pass `direction` to split Inbox/Sent — omitting it merges both. |
+| `get_delivery_stats` | `mailbox`, `days?` | Aggregate sent/deferred/bounced/unknown counts for a mailbox's outbound mail, sourced from Mektup's own Postfix delivery log — not a tracking pixel. |
 | `get_thread` | `threadKey`, `mailbox`, `direction?`, `trash?`, `folder?` | Every message in one thread, oldest first. |
 | `get_message` | `id` | Full message content. Marks it read as a side effect. **`html` is attacker-controlled** — never render it directly. |
 | `update_message` | `id`, `read?`, `restore?`, `flagged?`, `folderId?` | Mark read/unread, restore from trash, flag, or move to a folder — any combination in one call. |

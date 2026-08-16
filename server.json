@@ -3,7 +3,7 @@
   "name": "io.github.WeeCi/mektup-mcp",
   "title": "Mektup",
   "description": "Self-hosted multi-domain email as MCP tools - register domains, real mailboxes, send/read mail.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "websiteUrl": "https://usemektup.com",
   "icons": [
     { "src": "https://usemektup.com/favicon.svg", "mimeType": "image/svg+xml", "sizes": ["any"] }
