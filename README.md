@@ -134,6 +134,14 @@ Every tool returns its result as JSON text on success. On failure, it returns `i
 | `reset_mailbox_password` | `domain`, `localPart`, `password?` | Reset a mailbox's login password. Shown once. |
 | `delete_mailbox` | `domain`, `localPart` | Delete a mailbox. Confirm with the user first. |
 
+### Webhooks
+
+| Tool | Input | Description |
+|---|---|---|
+| `get_mailbox_webhook` | `domain`, `localPart` | Check a mailbox's configured webhook URL (never returns the signing secret). |
+| `set_mailbox_webhook` | `domain`, `localPart`, `url`, `regenerateSecret?` | Set/update the URL that fires (HMAC-signed) on every new inbound message - how an agent finds out about new mail without polling `list_messages`. Returns the signing secret once, on first setup or rotation. |
+| `delete_mailbox_webhook` | `domain`, `localPart` | Remove a mailbox's webhook. |
+
 ### Forwarding
 
 | Tool | Input | Description |
