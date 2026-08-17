@@ -4,7 +4,7 @@
   "description": "MCP server for Mektup - register domains, create real mailboxes, send/read mail, manage drafts/contacts/folders/forwarding/vacation replies, all as MCP tools backed by Mektup's live REST API.",
   "type": "module",
   "bin": {
-    "mektup-mcp": "./server.js"
+    "mektup-mcp": "server.js"
   },
   "scripts": {
     "start:http": "node http-server.js"
