@@ -1,6 +1,7 @@
 {
   "name": "mektup-mcp",
   "version": "0.2.5",
+  "description": "MCP server for Mektup - register domains, create real mailboxes, send/read mail, manage drafts/contacts/folders/forwarding/vacation replies, all as MCP tools backed by Mektup's live REST API.",
   "type": "module",
   "bin": {
     "mektup-mcp": "./server.js"
@@ -13,5 +14,28 @@
     "cors": "^2.8.5",
     "express": "^4.21.0",
     "zod": "^3.24.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "email",
+    "email-hosting",
+    "domain-email",
+    "smtp",
+    "imap",
+    "ai-agent"
+  ],
+  "author": "Mektup <contact@usemektup.com>",
+  "license": "MIT",
+  "homepage": "https://usemektup.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeeCi/mektup-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WeeCi/mektup-mcp/issues"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
