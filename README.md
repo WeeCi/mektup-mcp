@@ -1,6 +1,6 @@
 # Mektup MCP Server
 
-[Mektup](https://usemektup.com) is a self-hosted, multi-domain email platform. This MCP server lets an AI coding agent (Claude Code, Claude Desktop, Cursor, Lovable, Replit, Base44, or any MCP-compatible client) manage real email for a domain — register it, add the DNS records, create mailboxes, send and read mail, manage drafts/contacts/folders/forwarding/vacation replies — as native tool calls inside its own session, instead of the human hand-writing `curl` commands or pasting an API key into generated code.
+[Mektup](https://usemektup.com) is a fully-managed, multi-domain email platform - Mektup hosts all the mail infrastructure, so there's nothing to self-host; you just sign up and use it. This MCP server lets an AI coding agent (Claude Code, Claude Desktop, Cursor, Lovable, Replit, Base44, or any MCP-compatible client) manage real email for a domain — register it, add the DNS records, create mailboxes, send and read mail, manage drafts/contacts/folders/forwarding/vacation replies — as native tool calls inside its own session, instead of the human hand-writing `curl` commands or pasting an API key into generated code.
 
 Every tool call is a straight HTTP call to the real [Mektup REST API](https://usemektup.com/docs/api.md). There's no separate logic to learn — if you understand the API, you understand the MCP server. **Full coverage**: every REST endpoint has a matching tool, verified with real read and write round-trips against the live production API (create → update → list → delete, confirmed at each step).
 

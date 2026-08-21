@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.WeeCi/mektup-mcp",
   "title": "Mektup",
-  "description": "Self-hosted multi-domain email as MCP tools - register domains, real mailboxes, send/read mail.",
-  "version": "0.2.5",
+  "description": "Fully-managed multi-domain email as MCP tools (Mektup hosts everything, nothing to self-host) - register domains, real mailboxes, send/read mail.",
+  "version": "0.2.6",
   "websiteUrl": "https://usemektup.com",
   "icons": [
     { "src": "https://usemektup.com/favicon.svg", "mimeType": "image/svg+xml", "sizes": ["any"] }
