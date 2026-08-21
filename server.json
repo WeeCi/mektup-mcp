@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.WeeCi/mektup-mcp",
   "title": "Mektup",
-  "description": "Fully-managed multi-domain email as MCP tools (Mektup hosts everything, nothing to self-host) - register domains, real mailboxes, send/read mail.",
+  "description": "Fully-managed email as MCP tools - register domains, real mailboxes, send and receive mail.",
   "version": "0.2.6",
   "websiteUrl": "https://usemektup.com",
   "icons": [
