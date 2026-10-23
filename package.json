@@ -1,6 +1,6 @@
 {
   "name": "mektup-mcp",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "MCP server for Mektup - register domains, create real mailboxes, send/read mail, manage drafts/contacts/folders/forwarding/vacation replies, all as MCP tools backed by Mektup's live REST API.",
   "type": "module",
   "bin": {
